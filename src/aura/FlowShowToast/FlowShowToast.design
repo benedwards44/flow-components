@@ -1,0 +1,5 @@
+<design:component>
+    <design:attribute name="title" label="Title" />
+    <design:attribute name="message" label="Message" />
+    <design:attribute name="type" label="Type (error, warning, success, info)" />
+</design:component>

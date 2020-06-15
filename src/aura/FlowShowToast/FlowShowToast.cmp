@@ -1,0 +1,5 @@
+<aura:component implements="lightning:availableForFlowActions">
+    <aura:attribute name="title" type="String" />
+    <aura:attribute name="message" type="String" />
+    <aura:attribute name="type" default="success" type="String" />
+</aura:component>

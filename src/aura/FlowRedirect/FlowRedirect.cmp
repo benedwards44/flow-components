@@ -1,0 +1,4 @@
+<aura:component implements="lightning:availableForFlowActions">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="redirectUrl" type="String" />
+</aura:component>

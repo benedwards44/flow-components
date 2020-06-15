@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Select List</masterLabel>
+    <description>Select List override for Flows to provide normal Select List behaviour</description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="objectName" label="Object API Name" type="String" required="false" role="inputOnly"/>
+            <property name="fieldName" label="Field API Name" type="String" required="false" role="inputOnly"/>
+            <property name="label" label="Field Label" type="String" required="false" role="inputOnly"/>
+            <property name="required" label="Required" type="Boolean" default="false" required="false" role="inputOnly"/>
+            <property name="picklistValues" label="Picklist Options (Optional)" type="String" required="false" role="inputOnly"/>
+            <property name="value" label="Value" type="String"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
