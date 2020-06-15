@@ -2,8 +2,8 @@
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>48.0</apiVersion>
     <isExposed>true</isExposed>
-    <masterLabel>Select List</masterLabel>
-    <description>Select List override for Flows to provide normal Select List behaviour</description>
+    <masterLabel>Picklist (Custom)</masterLabel>
+    <description>Picklist override for Flows to provide normal Picklist behaviour</description>
     <targets>
         <target>lightning__FlowScreen</target>
     </targets>
@@ -14,7 +14,8 @@
             <property name="label" label="Field Label" type="String" required="false" role="inputOnly"/>
             <property name="required" label="Required" type="Boolean" default="false" required="false" role="inputOnly"/>
             <property name="picklistValues" label="Picklist Options (Optional)" type="String" required="false" role="inputOnly"/>
-            <property name="value" label="Value" type="String"/>
+            <property name="includeNoneValue" label="Include None Value" type="Boolean" required="true" role="inputOnly"/>
+            <property name="value" label="Value" type="String" />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

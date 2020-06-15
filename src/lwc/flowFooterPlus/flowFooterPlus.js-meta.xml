@@ -2,24 +2,4 @@
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="flowFooterPlus">
     <apiVersion>46.0</apiVersion>
     <isExposed>true</isExposed>
-    <masterLabel>Flow Footer</masterLabel>
-    <description>Use this to replace the Standard Flow Footer</description>
-    <targets>
-        <target>lightning__FlowScreen</target>
-    </targets>
-    <targetConfigs>
-        <targetConfig targets="lightning__FlowScreen">
-            <property name="canPause" description="Can the Flow be Paused?" label="Can Pause?" default="false" type="Boolean" role="inputOnly"/>
-            <property name="labelPause" description="Label for the Pause Button" label="Button Pause Label" default="Pause" type="String" role="inputOnly"/>
-            <property name="canBack" description="Can the Flow go Back to the Previous screen?" label="Can Back/Previous?" default="false" type="Boolean" role="inputOnly"/>
-            <property name="labelBack" description="Label for the Back/Previous Button" label="Button Back/Previuos Label" default="Previous" type="String" role="inputOnly"/>
-            <property name="canNext" description="Can the Flow go to the Next screen?" label="Can Next?" default="false" type="Boolean" role="inputOnly"/>
-            <property name="labelNext" description="Label for the Next Button" label="Button Next Label" default="Next" type="String" role="inputOnly"/>
-            <property name="canFinish" description="Can the Flow be Finished?" label="Can Finish/Done/Save?" default="false" type="Boolean" role="inputOnly"/>
-            <property name="labelFinish" description="Label for the Finish/Done/Save Button" label="Button Finish/Done/Save Label" default="Finish" type="String" role="inputOnly"/>
-            <property name="canSaveAndNew" description="Can the Flow Save and Add a New Record?" label="Can Save and New?" default="false" type="Boolean" role="inputOnly"/>
-            <property name="labelSaveAndNew" description="Label for the Save and New Button" label="Button Save and New Label" default="Save and New" type="String" role="inputOnly"/>
-            <property name="saveAndNewOutputVariable" description="Output Variable to set when pressing Save and New Button" label="Output Variable when Save and New" type="Boolean" role="outputOnly"/>
-        </targetConfig>
-    </targetConfigs>
 </LightningComponentBundle>

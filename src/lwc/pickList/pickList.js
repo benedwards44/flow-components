@@ -1,20 +1,21 @@
 import { LightningElement, api, wire, track } from 'lwc';
-import getPicklistOptions from '@salesforce/apex/NSS_SelectListController.getPicklistOptions';
+import getPicklistOptions from '@salesforce/apex/PickListController.getPicklistOptions';
 
-export default class SelectList extends LightningElement {
+export default class PickList extends LightningElement {
 
     @api objectName;
     @api fieldName;
     @api label;
     @api required;
     @api picklistValues;
+    @api includeNoneValue;
     @api value; 
 
     @track options;
 
     @track error;
 
-    @wire(getPicklistOptions, {objectName: '$objectName', fieldName: '$fieldName', addNone: true})
+    @wire(getPicklistOptions, {objectName: '$objectName', fieldName: '$fieldName', addNone: '$includeNoneValue'})
     wiredResult(result) { 
         if (this.picklistValues) {
             this.options = [];

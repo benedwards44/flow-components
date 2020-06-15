@@ -1,5 +1,4 @@
 import { LightningElement, api, track } from 'lwc';
-import { FlowNavigationPauseEvent, FlowNavigationNextEvent, FlowNavigationBackEvent, FlowNavigationFinishEvent } from 'lightning/flowSupport';
 
 export default class FlowFooterPlus extends LightningElement {
     @api availableActions = [];
@@ -61,41 +60,18 @@ export default class FlowFooterPlus extends LightningElement {
     handleClick (event) {
         // Figure out which action was called
         const actionClicked = event.target.name;
-        let navigateEvent;
+        let params = { detail: { actionClicked } };
 
-        switch(actionClicked) {
-            case 'PAUSE': 
-                navigateEvent = new FlowNavigationPauseEvent();
-                break;
-            case 'BACK': 
-                navigateEvent = new FlowNavigationBackEvent();
-                break;
-            case 'NEXT': 
-                navigateEvent = new FlowNavigationNextEvent();
-                break;
-            case 'SAVEANDNEW': 
-                navigateEvent = new FlowNavigationNextEvent();
-                this.saveAndNewOutputVariable = true;
-
-                if (this.auraComponent) {
-                    const fireEvent = new CustomEvent('SaveAndNew',{
-                        detail: {
-                            saveAndNewVariable: true
-                        },
-                    });
-
-                    //Fire Event
-                    this.dispatchEvent(fireEvent);
-                }
-
-                break;
-            case 'FINISH': 
-                navigateEvent = new FlowNavigationFinishEvent();
-                break;
-            default:                   
+        if (actionClicked === 'SAVEANDNEW') {
+            if (this.auraComponent) {
+                params.detail.saveAndNewVariable = true;
+            }
         }
 
-        this.dispatchEvent(navigateEvent);
+        const fireEvent = new CustomEvent('ButtonPressed', params);
+
+        //Fire Event
+        this.dispatchEvent(fireEvent);
     }
 
 }
