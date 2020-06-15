@@ -20,6 +20,6 @@ Similar to the standard Checkbox Group but allows you to pre-fill checkboxes wit
 ## Picklist
 Similar to standard picklist but supports the -- None -- option and allows you to default with values from a SOBject field/
 
-# Flow Footer
+## Flow Footer
 Footer override for Flows that allows for "Save & New" and "Save & Done" buttons. Supports a wizard where multiple records need to be created.
 
