@@ -1,0 +1,9 @@
+<template>
+    <span class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert" if:true={errorString}>
+        <span class="slds-assistive-text">error</span>
+        <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small">
+            <lightning-icon icon-name="utility:error" variant="inverse" alternative-text="error" size="small"></lightning-icon>
+        </span>
+        <h2>{errorString}</h2>
+    </span>
+</template>
