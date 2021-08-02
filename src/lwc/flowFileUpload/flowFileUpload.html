@@ -1,0 +1,21 @@
+<template>
+    <lightning-file-upload
+        label={label}
+        name="fileUploader"
+        accept={acceptedFormats}
+        record-id={recordId}
+        onuploadfinished={handleUploadFinished}
+        multiple={allowMultiple}
+    >
+    </lightning-file-upload>
+    <template if:true={hasUploadedFiles}>
+        <div class="slds-p-top_small slds-m-top_small">
+            <div class="slds-text-heading_small slds-m-bottom_small">Uploaded Files</div>
+            <ul class="slds-list_dotted">
+                <li for:each={uploadedFiles} for:item="file" key={file.key}>
+                    {file.name}
+                </li>
+            </ul>
+        </div>
+    </template>
+</template>
