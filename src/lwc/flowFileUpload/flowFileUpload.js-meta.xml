@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="flowFileUpload">
-    <apiVersion>51.0</apiVersion>
+    <apiVersion>55.0</apiVersion>
     <isExposed>true</isExposed>
     <masterLabel>File Upload (Custom)</masterLabel>
     <description>Use this to show the uploaded files as the user uploads theem.</description>
