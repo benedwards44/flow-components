@@ -2,4 +2,6 @@
     <design:attribute name="title" label="Title" />
     <design:attribute name="message" label="Message" />
     <design:attribute name="type" label="Type (error, warning, success, info)" />
+    <design:attribute name="mode" label="Mode (dismissible,pester,sticky)" />
+    <design:attribute name="duration" label="Duration (ms)"/>
 </design:component>

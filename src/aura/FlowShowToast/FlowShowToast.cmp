@@ -2,4 +2,6 @@
     <aura:attribute name="title" type="String" />
     <aura:attribute name="message" type="String" />
     <aura:attribute name="type" default="success" type="String" />
+    <aura:attribute name="mode" default="dismissible" type="String" />
+    <aura:attribute name="duration" default="5000" type="Integer" />
 </aura:component>
