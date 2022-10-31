@@ -1,0 +1,22 @@
+<template>
+    <div class={themeClasses} role="status">
+        <div class="slds-media__figure">
+            <lightning-icon 
+                icon-name={iconName}
+                alternative-text="information"
+                variant="inverse"
+                if:true={hasVariant}
+            >
+            </lightning-icon>
+            <lightning-icon 
+                icon-name={iconName}
+                alternative-text="information"
+                if:false={hasVariant}
+            >
+            </lightning-icon>
+        </div>
+        <div class="slds-media__body">
+            <p>{message}</p>
+        </div>
+    </div>
+</template>
